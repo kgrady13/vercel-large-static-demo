@@ -1,23 +1,13 @@
 # Vercel Large Static Demo
 
-Deploy a large static site to Vercel.
-
-## Setup
-
-Generate HTML/JS files and bundle them into `docs.tar.gz`:
-
-```bash
-npm run generate
-```
+Deploy a large static site (22,000 files) to Vercel using `--archive=tgz`.
 
 ## Deploy
 
-Uploads the archive and unpacks it during build:
+Generates 22k HTML/JS files and deploys with archive compression:
 
 ```bash
 npm run deploy
 ```
 
-Or click the button:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/kgrady13/vercel-large-static-demo)
+This uses the [`--archive=tgz`](https://vercel.com/docs/cli/deploy#archive) flag to compress files before uploading, avoiding rate limits when deploying thousands of files.
