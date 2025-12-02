@@ -112,6 +112,6 @@ const size = (
 console.log(`✅ Created docs.tar.gz (${size} MB)`);
 
 // Cleanup
-fs.rmSync(DOCS_DIR, { recursive: true });
+// fs.rmSync(DOCS_DIR, { recursive: true });
 console.log("🧹 Cleaned up docs/ folder");
 console.log("\n👉 Now run: npm run deploy");
