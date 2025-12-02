@@ -1,0 +1,8 @@
+{
+  "name": "vercel-large-static-demo",
+  "scripts": {
+    "generate": "node generate-docs.js",
+    "build": "bash build.sh",
+    "deploy": "vercel deploy --prod"
+  }
+}

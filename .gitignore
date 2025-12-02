@@ -1,0 +1,6 @@
+docs/
+public/
+node_modules/
+.vercel/
+.env*.local
+.vercel
