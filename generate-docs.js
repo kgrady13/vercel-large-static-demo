@@ -98,20 +98,5 @@ for (let i = 0; i < jsCount; i++) {
   if ((i + 1) % 2500 === 0) console.log(`  ${i + 1} JS files...`);
 }
 
-console.log(`\n✅ Generated ${TOTAL_FILES.toLocaleString()} files`);
-
-// Create archive
-console.log("📦 Creating archive...");
-execSync("COPYFILE_DISABLE=1 tar -czf docs.tar.gz docs", { cwd: __dirname });
-
-const size = (
-  fs.statSync(path.join(__dirname, "docs.tar.gz")).size /
-  1024 /
-  1024
-).toFixed(2);
-console.log(`✅ Created docs.tar.gz (${size} MB)`);
-
-// Cleanup
-fs.rmSync(DOCS_DIR, { recursive: true });
-console.log("🧹 Cleaned up docs/ folder");
+console.log(`\n✅ Generated ${TOTAL_FILES.toLocaleString()} files in docs/`);
 console.log("\n👉 Now run: npm run deploy");
